@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki: Transferencia de Tecnología - Caso Nintendo</title>
+    <!-- Incluye Tailwind CSS a través de CDN para una configuración rápida -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluye Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos personalizados si son necesarios */
+        body {
+            font-family: 'Inter', sans-serif; /* Usando fuente Inter como se especifica */
+            line-height: 1.6;
+        }
+        /* Asegura que los elementos interactivos tengan un tamaño adecuado para el toque */
+        button, a.button, li {
+            transition: all 0.3s ease-in-out;
+            cursor: pointer; /* Indicar interactividad */
+        }
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* Más redondeado para un look moderno */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Sombra más suave pero presente */
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            opacity: 0; /* Para la animación de fade-in */
+            transform: translateY(20px); /* Para la animación de slide-up */
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+        }
+
+        .section-card:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+        .section-card:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .list-item-hover:hover {
+            transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra más intensa al pasar el ratón */
+            background-color: #e0f7fa; /* Tono más claro de cian para hover */
+        }
+
+        /* Animación para el título */
+        @keyframes pulseFade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-fade {
+            animation: pulseFade 3s infinite ease-in-out;
+        }
+
+        /* Estilo específico para el título al estilo Nintendo */
+        .nintendo-title {
+            text-shadow: 3px 3px 0px #00008b; /* Sombra para el texto, color azul marino */
+            letter-spacing: -0.05em; /* Un poco de espaciado negativo para un look más compacto */
+        }
+        /* Estilo específico para la palabra Nintendo en el subtítulo */
+        .nintendo-brand {
+            text-shadow: 2px 2px 0px #cc2222; /* Sombra para la marca, color rojo más vibrante */
+            letter-spacing: 0.05em; /* Un poco de espaciado para que resalte */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 text-gray-800 p-4 sm:p-6 md:p-8 lg:p-10 min-h-screen flex flex-col items-center justify-center">
+
+    <div class="container mx-auto max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-6xl w-full">
+        <!-- El contenedor principal es amplio: max-w-6xl -->
+
+        <header class="text-center mb-10 sm:mb-12 lg:mb-16 bg-white p-6 rounded-3xl shadow-2xl transform hover:scale-102 transition-transform duration-300 ease-in-out border-b-4 border-red-600">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-red-700 mb-3 sm:mb-5 leading-tight animate-pulse-fade nintendo-title">
+                Wiki: Transferencia de Tecnología
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-700 font-medium tracking-wide flex items-center justify-center">
+                Aplicación en Empresas y Negocios: El Caso de
+                <span class="text-blue-800 font-extrabold nintendo-brand ml-2 flex items-center">
+                    <i class="fas fa-gamepad text-blue-600 mr-2 text-2xl md:text-3xl transform rotate-3 hover:rotate-0 transition-transform duration-200"></i> <!-- Icono de Gamepad -->
+                    Nintendo
+                </span>
+            </p>
+        </header>
+
+        <section class="section-card">
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-6 pb-3 border-b-2 border-blue-400">
+                1. ¿Qué es la Transferencia de Tecnología?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-md sm:text-lg mb-4 leading-relaxed text-justify">
+                        La transferencia de tecnología es el proceso por el cual el conocimiento, las habilidades, los métodos de fabricación, las muestras, prototipos de diseño, licencias o equipos se transmiten de una entidad a otra. Es crucial para el progreso y la innovación continua en cualquier sector.
+                    </p>
+                    <p class="text-md sm:text-lg mb-4 leading-relaxed text-justify">
+                        Su objetivo principal es la aplicación comercial efectiva, el desarrollo de productos o servicios innovadores, o la mejora sustancial de procesos existentes. Va más allá de una simple transacción de propiedad intelectual; implica el traslado de un "saber hacer" que empodera a la entidad receptora para innovar o producir de manera más eficiente y efectiva.
+                    </p>
+                    <p class="text-md sm:text-lg leading-relaxed text-justify">
+                        Este proceso dinámico puede ocurrir en diversas configuraciones: entre instituciones académicas y empresas, entre organizaciones de distintos sectores industriales, o incluso internamente, facilitando el flujo de conocimiento entre departamentos o filiales dentro de la misma corporación, fomentando la colaboración y el crecimiento mutuo.
+                    </p>
+                </div>
+                <div class="flex justify-center p-4 bg-blue-50 rounded-2xl shadow-xl border border-blue-200">
+                    <!-- Image of Concepto de Transferencia de Tecnología -->
+                    <img src="./img/transfport.jpeg" alt="[Image of Concepto de Transferencia de Tecnología]" class="w-full h-auto rounded-xl shadow-lg transform hover:scale-102 transition-transform duration-300">
+                </div>
+            </div>
+            <p class="text-sm sm:text-md text-gray-700 italic mt-8 text-center bg-blue-100 p-4 rounded-xl shadow-inner border border-blue-300">
+                "La transferencia es la chispa que enciende la innovación y la adaptación, impulsando el progreso en el dinámico mercado global."
+            </p>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-6 pb-3 border-b-2 border-blue-400">
+                2. Tipos de Transferencia de Tecnología
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-md sm:text-lg">
+                <li class="bg-blue-50 p-5 rounded-2xl shadow-md hover:bg-blue-100 list-item-hover flex flex-col justify-between border border-blue-200">
+                    <strong class="text-blue-800 text-lg sm:text-xl mb-2">Transferencia Horizontal:</strong>
+                    <p class="leading-relaxed mb-2">Conocimiento adaptado de un sector industrial o campo de aplicación a otro, donde originalmente no fue concebido.</p>
+                    <p class="text-xs sm:text-sm text-gray-600 italic mt-auto">Ejemplo: Una tecnología de filtración de agua para la exploración espacial que se aplica para purificación de agua en el hogar.</p>
+                </li>
+                <li class="bg-blue-50 p-5 rounded-2xl shadow-md hover:bg-blue-100 list-item-hover flex flex-col justify-between border border-blue-200">
+                    <strong class="text-blue-800 text-lg sm:text-xl mb-2">Transferencia Vertical:</strong>
+                    <p class="leading-relaxed mb-2">Progresión del conocimiento desde la investigación fundamental y el desarrollo temprano hasta la comercialización de un producto final.</p>
+                    <p class="text-xs sm:text-sm text-gray-600 italic mt-auto">Ejemplo: Un avance en nanotecnología desarrollado en una universidad que culmina en un nuevo medicamento o material de alta resistencia.</p>
+                </li>
+                <li class="bg-blue-50 p-5 rounded-2xl shadow-md hover:bg-blue-100 list-item-hover flex flex-col justify-between border border-blue-200">
+                    <strong class="text-blue-800 text-lg sm:text-xl mb-2">Transferencia Interna:</strong>
+                    <p class="leading-relaxed mb-2">Movilización y diseminación de conocimiento, habilidades y tecnologías dentro de la misma organización, entre diferentes departamentos, divisiones o filiales.</p>
+                    <p class="text-xs sm:text-sm text-gray-600 italic mt-auto">Ejemplo: El departamento de I+D de una automotriz desarrolla una nueva batería y la transfiere a la línea de producción de vehículos eléctricos.</p>
+                </li>
+                <li class="bg-blue-50 p-5 rounded-2xl shadow-md hover:bg-blue-100 list-item-hover flex flex-col justify-between border border-blue-200">
+                    <strong class="text-blue-800 text-lg sm:text-xl mb-2">Transferencia Externa:</strong>
+                    <p class="leading-relaxed mb-2">Compartir o adquirir tecnología entre organizaciones distintas, a menudo mediante acuerdos legales como licencias, joint ventures, alianzas estratégicas o la venta de patentes.</p>
+                    <p class="text-xs sm:text-sm text-gray-600 italic mt-auto">Ejemplo: Una pequeña startup especializada en inteligencia artificial licencia su software de optimización logística a una gran corporación de transporte.</p>
+                </li>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-6 pb-3 border-b-2 border-blue-400">
+                3. Fases del Proceso de Transferencia
+            </h2>
+            <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-md sm:text-lg">
+                <!-- Fases 1 a 4 en orden normal -->
+                <li class="bg-green-50 p-5 rounded-2xl shadow-md hover:bg-green-100 list-item-hover flex flex-col justify-between border border-green-200">
+                    <strong class="text-green-800 text-lg sm:text-xl mb-2">1. Identificación y Evaluación:</strong>
+                    <p class="leading-relaxed">Descubrir y valorar el potencial comercial o de aplicación de una tecnología específica, analizando su viabilidad técnica y de mercado.</p>
+                </li>
+                <li class="bg-green-50 p-5 rounded-2xl shadow-md hover:bg-green-100 list-item-hover flex flex-col justify-between border border-green-200">
+                    <strong class="text-green-800 text-lg sm:text-xl mb-2">2. Protección (si aplica):</strong>
+                    <p class="leading-relaxed">Salvaguardar legalmente la propiedad intelectual de la tecnología (ej., patentes, derechos de autor, secretos comerciales) para asegurar los derechos y el valor de la innovación.</p>
+                </li>
+                <li class="bg-green-50 p-5 rounded-2xl shadow-md hover:bg-green-100 list-item-hover flex flex-col justify-between border border-green-200">
+                    <strong class="text-green-800 text-lg sm:text-xl mb-2">3. Negociación y Acuerdos:</strong>
+                    <p class="leading-relaxed">Formalizar los términos y condiciones de la transferencia mediante la firma de contratos, acuerdos de licencia, joint ventures o memorandos de entendimiento entre las partes involucradas.</p>
+                </li>
+                <li class="bg-green-50 p-5 rounded-2xl shadow-md hover:bg-green-100 list-item-hover flex flex-col justify-between border border-green-200">
+                    <strong class="text-green-800 text-lg sm:text-xl mb-2">4. Adaptación y Absorción:</strong>
+                    <p class="leading-relaxed">La entidad receptora ajusta la tecnología a sus necesidades específicas, y simultáneamente, desarrolla las capacidades internas (conocimiento, habilidades, infraestructura) para poder utilizarla y mantenerla de forma efectiva.</p>
+                </li>
+                <!-- La 5ta fase, ubicada al final del HTML de la lista, y ocupando 2 columnas -->
+                <li class="bg-green-50 p-6 rounded-2xl shadow-md hover:bg-green-100 list-item-hover flex flex-col justify-between border border-green-300 md:col-span-2 lg:col-span-2 text-center">
+                    <strong class="text-green-800 text-lg sm:text-xl mb-3">5. Implementación y Desarrollo:</strong>
+                    <p class="leading-relaxed text-justify mx-auto max-w-prose">Poner en marcha la tecnología de manera operativa, integrándola en los procesos productivos existentes o utilizándola como base para el desarrollo de nuevos productos y servicios innovadores. Esta fase es la culminación del proceso, donde la teoría se convierte en práctica y se materializa el valor de la transferencia tecnológica.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-6 pb-3 border-b-2 border-blue-400">
+                4. Caso de Estudio: Nintendo y la Transferencia de Tecnología
+            </h2>
+            <!-- Los bloques de contenido de Nintendo ahora usan 'flex flex-col' en lugar de 'grid' para asegurar una sola columna siempre. -->
+            <div class="flex flex-col gap-12">
+                <div class="flex flex-col items-center">
+                    <p class="text-md sm:text-lg mb-4 leading-relaxed text-justify w-full">
+                        Nintendo es un ejemplo fascinante de cómo la transferencia de tecnología, tanto interna como externa, ha sido fundamental en su evolución de una compañía de naipes a un gigante del entretenimiento digital. Su historia está marcada por la adaptación constante, la innovación y la integración estratégica de tecnologías existentes para crear experiencias de juego únicas y revolucionarias que han cautivado a generaciones.
+                    </p>
+                    <p class="text-md sm:text-lg mb-6 font-semibold text-blue-600 w-full">Ejemplos clave de transferencia de tecnología en Nintendo:</p>
+
+                    <!-- Bloque de Texto y Primera Imagen (Consola Nintendo Evolución) - Todo en columna -->
+                    <div class="flex flex-col gap-8 items-start w-full mb-8">
+                        <div class="w-full flex flex-col">
+                            <li class="bg-yellow-50 p-4 rounded-lg shadow-sm hover:bg-yellow-100 list-item-hover mb-4">
+                                <strong class="text-yellow-800 text-lg sm:text-xl mb-2 block">De Juguetes a Electrónica (Transferencia Horizontal/Externa):</strong> Nintendo pivotó radicalmente de la fabricación de naipes y juguetes tradicionales a la integración de tecnología electrónica. Este cambio estratégico requirió que la empresa aprendiera y adoptara conocimientos clave de la incipiente industria de la electrónica para diseñar y producir juguetes interactivos y, eventualmente, sus primeras consolas de videojuegos.
+                                <p class="text-xs sm:text-sm text-gray-600 ml-6 italic mt-1">Un salto de la mecánica simple a la compleja electrónica digital, adaptando know-how de otros campos.</p>
+                            </li>
+                            <li class="bg-yellow-50 p-4 rounded-lg shadow-sm hover:bg-yellow-100 list-item-hover">
+                                <strong class="text-yellow-800 text-lg sm:text-xl mb-2 block">Uso y Optimización de Tecnología de Terceros (Transferencia Externa):</strong>
+                                <ul class="list-circle pl-6 text-sm sm:text-base space-y-3">
+                                    <li class="p-2 rounded-md hover:bg-yellow-100">
+                                        **Chips y Procesadores:** Nintendo no fabricaba sus propios semiconductores complejos. En su lugar, adquiría licencias y establecía colaboraciones estratégicas con empresas especializadas como Ricoh (para la NES/Famicom) o Silicon Graphics (para la Nintendo 64). La transferencia clave aquí no era solo la adquisición del chip, sino el "saber cómo" integrar, optimizar y diseñar el hardware de la consola alrededor de estos componentes de terceros para maximizar el rendimiento gráfico y de procesamiento en sus sistemas.
+                                        <p class="text-xs sm:text-sm text-gray-600 ml-4 italic mt-1">Adquirir y personalizar el "cerebro" de la consola de especialistas externos para sus propias necesidades de juego.</p>
+                                    </li>
+                                    <li class="p-2 rounded-md hover:bg-yellow-100">
+                                        **Medios de Almacenamiento:** Aunque inicialmente se aferraron a los cartuchos por sus ventajas, la evolución hacia formatos como los discos ópticos del GameCube y Wii U implicó trabajar en conjunto con proveedores externos. Esta colaboración buscaba adaptar y optimizar estas tecnologías de almacenamiento a los requisitos específicos de los videojuegos, como velocidades de carga y capacidades de datos.
+                                        <p class="text-xs sm:text-sm text-gray-600 ml-4 italic mt-1">Colaborar para conseguir la solución de almacenamiento de juegos más eficiente y costo-efectiva.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="flex justify-center p-4 bg-gray-50 rounded-2xl shadow-xl border border-gray-200 w-full">
+                            <!-- Imagen de Consola Nintendo (evolución, NES, N64) -->
+                            <img src="img/Nintendo-Handheld-Evolution.png" alt="[Image of Consola Nintendo Evolución]" class="w-full h-auto rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+
+                    <!-- Bloque de Texto y Segunda Imagen (Nintendo DS / Wii Controller) - Todo en columna -->
+                    <div class="flex flex-col gap-8 items-start w-full">
+                        <div class="w-full flex flex-col">
+                            <li class="bg-yellow-50 p-4 rounded-lg shadow-sm hover:bg-yellow-100 list-item-hover mb-4">
+                                <strong class="text-yellow-800 text-lg sm:text-xl mb-2 block">Innovación a través de la Interfaz y Controles (Transferencia Interna y Externa):</strong>
+                                <ul class="list-circle pl-6 text-sm sm:text-base space-y-3">
+                                    <li class="p-2 rounded-md hover:bg-yellow-100">
+                                        **Wii y Controles de Movimiento:** Si bien los sensores de movimiento no eran una tecnología completamente nueva, Nintendo apalancó este conocimiento (una transferencia externa de la ciencia de los sensores de aceleración) y lo integró de forma ingeniosa en una interfaz de usuario revolucionaria para los videojuegos, democratizando el juego a un público masivo. Esto también demandó una considerable transferencia interna para que sus desarrolladores crearan experiencias adaptadas a este nuevo paradigma.
+                                        <p class="text-xs sm:text-sm text-gray-600 ml-4 italic mt-1">Redefinir la interacción con el juego haciendo del movimiento el eje central, fusionando tecnología externa con diseño interno.</p>
+                                    </li>
+                                    <li class="p-2 rounded-md hover:bg-yellow-100">
+                                        **Nintendo DS y la Doble Pantalla/Táctil:** La idea de las pantallas duales y táctiles ya existía en otros dispositivos, pero Nintendo la adaptó de manera brillante al gaming portátil. Esto implicó una transferencia de tecnología de paneles táctiles y el desarrollo de software específico para integrar ambas pantallas de manera efectiva en la experiencia de juego, abriendo nuevas posibilidades interactivas.
+                                        <p class="text-xs sm:text-sm text-gray-600 ml-4 italic mt-1">Innovar radicalmente en el gaming portátil utilizando múltiples pantallas para una experiencia única e interactiva.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="bg-yellow-50 p-4 rounded-lg shadow-sm hover:bg-yellow-100 list-item-hover">
+                                <strong class="text-yellow-800 text-lg sm:text-xl mb-2 block">Licencias de Software y Propiedad Intelectual (Transferencia Externa):</strong> Nintendo no solo se limita a desarrollar sus propios videojuegos. Estratégicamente, licencia sus icónicas franquicias (como Mario, The Legend of Zelda, Pokémon) a otras empresas para la creación de productos, películas, series animadas o incluso atracciones en parques temáticos. Esto representa una transferencia de marca, estilo artístico y narrativo que extiende el universo de Nintendo más allá de sus consolas y genera nuevas fuentes de ingresos.
+                                <p class="text-xs sm:text-sm text-gray-600 ml-6 italic mt-1">Expandir el legado y el alcance de sus personajes emblemáticos a través de colaboraciones externas, diversificando su presencia en el mercado.</p>
+                            </li>
+                        </div>
+                        <div class="flex justify-center p-4 bg-gray-50 rounded-2xl shadow-xl border border-gray-200 w-full">
+                            <!-- Imagen de Nintendo DS / Wii Controller -->
+                            <img src="img/super-smash-bros-ultimate_8.webp" alt="[Image of Nintendo DS y Wii Control]" class="w-full h-auto rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm sm:text-md text-gray-700 italic mt-8 text-center bg-purple-100 p-4 rounded-xl shadow-inner border border-purple-300">
+                Nintendo es un vivo ejemplo de que la transferencia de tecnología no se trata solo de adoptar lo más novedoso, sino de la maestría en cómo integrarlo, adaptarlo y emplearlo estratégicamente para forjar algo verdaderamente único y de inmenso valor para el consumidor.
+            </p>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-6 pb-3 border-b-2 border-blue-400">
+                5. Recurso Visual: Video sobre la Transferencia de Tecnología
+            </h2>
+            <div class="flex flex-col items-center justify-center p-4 bg-purple-50 rounded-2xl shadow-xl border border-purple-200 w-full">
+                <p class="text-md sm:text-lg mb-6 text-center max-w-prose">
+                    A continuación, un breve video para ilustrar de forma dinámica los conceptos de transferencia de tecnología y su impacto.
+                </p>
+                <video class="w-full w-full h-auto rounded-xl shadow-lg border border-purple-300" controls autoplay loop muted>
+                    <!-- Reemplaza esta URL con la URL de tu video. Ej: "tu_video.mp4" -->
+                    <!-- <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video. -->
+                </video>
+            </div>
+        <!-- </section> -->
+
+
+        <footer class="text-center mt-12 pt-6 border-t-2 border-gray-300 text-gray-600 text-sm sm:text-base">
+            <p>&copy; 2025 Wiki de Tecnología - Para fines educativos.</p>
+            <p>¡Esperamos que esta información te sea de gran utilidad y te inspire a explorar más!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
